@@ -270,8 +270,8 @@ void EditorPlugin::notify_scene_changed(const Node *scn_root) {
 	emit_signal(SNAME("scene_changed"), scn_root);
 }
 
-void EditorPlugin::notify_main_screen_changed(const String &screen_name) {
-	if (screen_name == last_main_screen_name) {
+void EditorPlugin::notify_main_screen_changed(const String &screen_name, bool p_force) {
+	if (!p_force && screen_name == last_main_screen_name) {
 		return;
 	}
 

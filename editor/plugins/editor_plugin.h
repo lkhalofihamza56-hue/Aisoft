@@ -181,7 +181,7 @@ public:
 	void set_force_draw_over_forwarding_enabled();
 	bool is_force_draw_over_forwarding_enabled() { return force_draw_over_forwarding_enabled; }
 
-	void notify_main_screen_changed(const String &screen_name);
+	void notify_main_screen_changed(const String &screen_name, bool p_force = false);
 	void notify_scene_changed(const Node *scn_root);
 	void notify_scene_closed(const String &scene_filepath);
 	void notify_resource_saved(const Ref<Resource> &p_resource);
